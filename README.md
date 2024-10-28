@@ -5,8 +5,8 @@
 - [Project informations](#project-informations)
   - [Description](#description)
   - [Tech stack](#tech-stack)
-  - [Props](#props)
   - [Features](#features)
+  - [Props](#props)
 
 # Roadmap
 
@@ -28,12 +28,6 @@ This component was built using the following tools:
 - TypeScript
 - CSS
 
-## Props
-
-| Prop  | Required | Type   | Description               |
-| ----- | -------- | ------ | ------------------------- |
-| Title | Yes      | string | Title of the application. |
-
 ## Features
 
 The app has the following features, designed to showcase my competences:
@@ -41,3 +35,9 @@ The app has the following features, designed to showcase my competences:
 | Functionality | Description                                                                           |
 | ------------- | ------------------------------------------------------------------------------------- |
 | Demo overlay  | Give the possibility to come back to the portfolio to the user and shows demo's name. |
+
+## Props
+
+| Prop  | Type   | Required | Description               |
+| ----- | ------ | -------- | ------------------------- |
+| title | string | Yes      | Title of the application. |
