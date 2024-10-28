@@ -34,7 +34,7 @@
   box-sizing: border-box;
 }
 .demo-overlay-container:hover {
-  width: 250px;
+  width: 300px;
   opacity: 1;
 }
 
