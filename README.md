@@ -38,6 +38,6 @@ The app has the following features, designed to showcase my competences:
 
 ## Props
 
-| Prop  | Type   | Required | Description               |
-| ----- | ------ | -------- | ------------------------- |
-| title | string | Yes      | Title of the application. |
+| Prop    | Type     | Required (default value) | Description               |
+| ------- | -------- | ------------------------ | ------------------------- |
+| `title` | `string` | Yes                      | Title of the application. |
