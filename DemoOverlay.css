@@ -12,7 +12,7 @@
 .demo-overlay-container {
   background-color: #001428;
   height: 50px;
-  width: 19px;
+  width: 50px;
   gap: 25px;
   display: flex;
   border-radius: 999px;
@@ -29,10 +29,12 @@
   position: absolute;
   top: 10px;
   left: 10px;
-  transition: width 0.5s cubic-bezier(0.1, 0.5, 0.3, 1.3);
+  transition: all 0.5s cubic-bezier(0.1, 0.5, 0.3, 1.3);
+  opacity: 0.5;
 }
 .demo-overlay-container:hover {
   width: 250px;
+  opacity: 1;
 }
 
 .demo-overlay-container * {
