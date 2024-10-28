@@ -5,6 +5,7 @@
 - [Project informations](#project-informations)
   - [Description](#description)
   - [Tech stack](#tech-stack)
+  - [Props](#props)
   - [Features](#features)
 
 # Roadmap
@@ -26,6 +27,12 @@ This component was built using the following tools:
 - React.js
 - TypeScript
 - CSS
+
+## Props
+
+| Prop  | Required | Type   | Description               |
+| ----- | -------- | ------ | ------------------------- |
+| Title | Yes      | string | Title of the application. |
 
 ## Features
 
