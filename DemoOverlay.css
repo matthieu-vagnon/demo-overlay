@@ -22,12 +22,15 @@
   -moz-user-select: none;
   -webkit-user-select: none;
   pointer-events: none;
+  z-index: 999;
+  border-radius: 0 0 5px 5px;
 }
 .demo-overlay-container * {
   font-family: Nunito;
   color: white;
   font-size: 20px;
   font-weight: 700;
+  text-decoration: none;
 }
 
 .back-button {
@@ -37,7 +40,7 @@
   gap: 2px;
   pointer-events: initial;
   opacity: 1;
-  transition: opacity 0.5s fade;
+  transition: opacity 0.2s ease-out;
 }
 .back-button:hover {
   opacity: 0.5;
