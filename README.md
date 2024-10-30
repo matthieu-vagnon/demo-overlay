@@ -1,10 +1,10 @@
-# Table of contents
+# Table of Contents
 
-- [Table of contents](#table-of-contents)
+- [Table of Contents](#table-of-contents)
 - [Roadmap](#roadmap)
-- [Project informations](#project-informations)
+- [Project Informations](#project-informations)
   - [Description](#description)
-  - [Tech stack](#tech-stack)
+  - [Tech Stack](#tech-stack)
   - [Features](#features)
   - [Props](#props)
 
@@ -14,13 +14,13 @@
 | ---------------------- | -------- | ------ |
 | ~~Create the overlay~~ | !!!      | ✅     |
 
-# Project informations
+# Project Informations
 
 ## Description
 
 Simple React.js overlay used on top of demo applications to let the user return to the portfolio.
 
-## Tech stack
+## Tech Stack
 
 This component was built using the following tools:
 
