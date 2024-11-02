@@ -3,26 +3,26 @@
   font-style: normal;
   font-display: swap;
   font-weight: 100 900;
-  src: url(./nunito-variable.ttf) format("truetype");
+  src: url(./assets/nunito-variable.ttf) format("truetype");
   unicoderange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
     U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
     U+FEFF;
 }
 
-.demo-overlay-container {
+.demo-overlay {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 5px;
   position: fixed;
-  top: 10px;
-  left: 10px;
+  top: 15px;
+  left: 15px;
   z-index: 999;
   height: 50px;
   --bg-color: #001428;
   --text-color: white;
 }
 
-.demo-overlay-container * {
+.demo-overlay * {
   color: var(--text-color);
   fill: var(--text-color);
   white-space: nowrap;
@@ -53,7 +53,7 @@
   opacity: 0.66;
   transform: scale(0.8);
 }
-.demo-overlay-container.active .back-button {
+.demo-overlay.active .back-button {
   opacity: 1;
 }
 
@@ -64,7 +64,7 @@
   position: relative;
 }
 
-.demo-overlay-container .back-button-icon {
+.demo-overlay .back-button-icon {
   transition: all 0.4s cubic-bezier(0.14, 1.13, 0.19, 1.33);
   position: absolute;
   left: 0;
@@ -74,35 +74,36 @@
   align-items: center;
 }
 
-.demo-overlay-container .back-button-open {
+.demo-overlay .back-button-open {
   top: 0;
   bottom: 0;
 }
-.demo-overlay-container.active .back-button-open {
+.demo-overlay.active .back-button-open {
   top: -100%;
   bottom: 100%;
 }
 
-.demo-overlay-container .back-button-close {
+.demo-overlay .back-button-close {
   top: 100%;
   bottom: -100%;
 }
-.demo-overlay-container.active .back-button-close {
+.demo-overlay.active .back-button-close {
   top: 0;
   bottom: 0;
 }
 
-.demo-overlay-container .active-content {
-  width: 0;
+.demo-overlay .active-content {
+  width: auto;
   overflow: hidden;
   background-color: var(--bg-color);
   border-radius: 999px;
   height: 100%;
-  transition: width 0.4s cubic-bezier(0.14, 1.13, 0.19, 1.33);
+  transition: transform 0.4s cubic-bezier(0.14, 1.13, 0.19, 1.33);
   box-sizing: border-box;
+  transform: translateY(-65px);
 }
-.demo-overlay-container.active .active-content {
-  width: 300px;
+.demo-overlay.active .active-content {
+  transform: translateY(0);
 }
 
 .menu-container {
@@ -132,6 +133,20 @@
   opacity: 0.5;
 }
 
+.back-arrow-icon {
+  height: 20%;
+}
+
 .title {
   font-weight: 400;
+}
+
+@media screen and (max-width: 600px) {
+  .demo-overlay * {
+    font-size: 1.3rem;
+  }
+
+  .back-arrow-icon {
+    height: 17%;
+  }
 }

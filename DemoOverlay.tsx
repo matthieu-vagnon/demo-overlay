@@ -14,7 +14,7 @@ interface DemoOverlayProps {
   title: string;
 }
 export default function DemoOverlay(props: DemoOverlayProps) {
-  const { title, ...other } = props;
+  const { title } = props;
   const [active, setActive] = useState(false);
 
   const handleSwitch = () => {
@@ -33,10 +33,7 @@ export default function DemoOverlay(props: DemoOverlayProps) {
 
   return (
     <React.Fragment>
-      <div
-        className={`demo-overlay-container ${active && "active"}`}
-        {...other}
-      >
+      <div className={`demo-overlay ${active && "active"}`}>
         <button className="back-button" onClick={handleSwitch}>
           <div className="overflow-hidden">
             <div className="back-button-icon back-button-open">
@@ -63,7 +60,7 @@ export default function DemoOverlay(props: DemoOverlayProps) {
           <div className="menu-container">
             <a href={backButton.url} className="back-link">
               <svg
-                height="20%"
+                className="back-arrow-icon"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 122.88 108.06"
               >
