@@ -34,9 +34,9 @@ export default function DemoOverlay(props: DemoOverlayProps) {
   return (
     <React.Fragment>
       <div className={`demo-overlay ${active && "active"}`}>
-        <button className="back-button" onClick={handleSwitch}>
-          <div className="overflow-hidden">
-            <div className="back-button-icon back-button-open">
+        <button className="menu-switch" onClick={handleSwitch}>
+          <div className="overflow-container">
+            <div className="menu-switch-icon menu-switch-open">
               <img
                 height="25%"
                 width="25%"
@@ -44,10 +44,9 @@ export default function DemoOverlay(props: DemoOverlayProps) {
                 alt="Portfolio logo"
               />
             </div>
-            <div className="back-button-icon back-button-close">
+            <div className="menu-switch-icon menu-switch-close">
               <svg
                 height="50%"
-                width="50%"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 -960 960 960"
               >

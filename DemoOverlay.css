@@ -1,3 +1,11 @@
+/* #region Configuration */
+.demo-overlay {
+  --bg-color: #001428;
+  --text-color: white;
+}
+/* #endregion */
+
+/* #region Font faces */
 @font-face {
   font-family: "Nunito";
   font-style: normal;
@@ -8,6 +16,7 @@
     U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
     U+FEFF;
 }
+/* #endregion */
 
 .demo-overlay {
   display: flex;
@@ -18,21 +27,16 @@
   left: 15px;
   z-index: 999;
   height: 50px;
-  --bg-color: #001428;
-  --text-color: white;
-}
-
-.demo-overlay * {
   color: var(--text-color);
   fill: var(--text-color);
   white-space: nowrap;
   text-decoration: none;
   font-family: Nunito;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 18px;
 }
 
-.back-button {
+.menu-switch {
   background-color: unset;
   border: none;
   cursor: pointer;
@@ -45,26 +49,26 @@
   padding: 0;
   box-sizing: border-box;
 }
-.back-button:hover {
+.menu-switch:hover {
   opacity: 1;
   transform: scale(0.9);
 }
-.back-button:active {
+.menu-switch:active {
   opacity: 0.66;
   transform: scale(0.8);
 }
-.demo-overlay.active .back-button {
+.demo-overlay.active .menu-switch {
   opacity: 1;
 }
 
-.overflow-hidden {
+.overflow-container {
   overflow: hidden;
   height: 100%;
   width: 100%;
   position: relative;
 }
 
-.demo-overlay .back-button-icon {
+.demo-overlay .menu-switch-icon {
   transition: all 0.4s cubic-bezier(0.14, 1.13, 0.19, 1.33);
   position: absolute;
   left: 0;
@@ -74,20 +78,20 @@
   align-items: center;
 }
 
-.demo-overlay .back-button-open {
+.demo-overlay .menu-switch-open {
   top: 0;
   bottom: 0;
 }
-.demo-overlay.active .back-button-open {
+.demo-overlay.active .menu-switch-open {
   top: -100%;
   bottom: 100%;
 }
 
-.demo-overlay .back-button-close {
+.demo-overlay .menu-switch-close {
   top: 100%;
   bottom: -100%;
 }
-.demo-overlay.active .back-button-close {
+.demo-overlay.active .menu-switch-close {
   top: 0;
   bottom: 0;
 }
@@ -128,6 +132,7 @@
   align-items: center;
   opacity: 1;
   transition: opacity 0.2s ease-in-out;
+  font-weight: 700;
 }
 .back-link:hover {
   opacity: 0.5;
@@ -137,11 +142,12 @@
   height: 20%;
 }
 
-.title {
-  font-weight: 400;
-}
-
 @media screen and (max-width: 600px) {
+  .demo-overlay {
+    top: 10px;
+    left: 10px;
+  }
+
   .demo-overlay * {
     font-size: 1.3rem;
   }
