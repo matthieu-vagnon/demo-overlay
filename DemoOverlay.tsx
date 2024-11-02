@@ -33,10 +33,10 @@ export default function DemoOverlay(props: DemoOverlayProps) {
 
   return (
     <React.Fragment>
-      <div className={`demo-overlay ${active && "active"}`}>
-        <button className="menu-switch" onClick={handleSwitch}>
-          <div className="overflow-container">
-            <div className="menu-switch-icon menu-switch-open">
+      <div className={`demo-overlay ${active && "demo-overlay-active"}`}>
+        <button className="demo-overlay-switch" onClick={handleSwitch}>
+          <div className="demo-overlay-switch-icon-container">
+            <div className="demo-overlay-switch-icon demo-overlay-open-icon">
               <img
                 height="25%"
                 width="25%"
@@ -44,7 +44,7 @@ export default function DemoOverlay(props: DemoOverlayProps) {
                 alt="Portfolio logo"
               />
             </div>
-            <div className="menu-switch-icon menu-switch-close">
+            <div className="demo-overlay-switch-icon demo-overlay-close-icon">
               <svg
                 height="50%"
                 xmlns="http://www.w3.org/2000/svg"
@@ -55,11 +55,11 @@ export default function DemoOverlay(props: DemoOverlayProps) {
             </div>
           </div>
         </button>
-        <div className="active-content">
-          <div className="menu-container">
-            <a href={backButton.url} className="back-link">
+        <div className="demo-overlay-content-container">
+          <div className="demo-overlay-content">
+            <a href={backButton.url} className="demo-overlay-link">
               <svg
-                className="back-arrow-icon"
+                className="demo-overlay-link-icon"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 122.88 108.06"
               >
@@ -67,7 +67,7 @@ export default function DemoOverlay(props: DemoOverlayProps) {
               </svg>
               <span>{backButton.title}</span>
             </a>
-            <span className="title">{title}</span>
+            <span>{title}</span>
           </div>
         </div>
       </div>
