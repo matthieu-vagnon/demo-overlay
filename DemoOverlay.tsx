@@ -41,7 +41,7 @@ export default function DemoOverlay(props: DemoOverlayProps) {
                 height="25%"
                 width="25%"
                 src={`${backButton.url}/logo-mono-white.svg`}
-                alt="Portfolio logo"
+                alt="Portfolio Logo"
               />
             </div>
             <div className="demo-overlay-switch-icon demo-overlay-close-icon">
