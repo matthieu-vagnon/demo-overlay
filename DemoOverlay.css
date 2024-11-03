@@ -135,6 +135,7 @@
   opacity: 1;
   transition: opacity 0.2s ease-in-out;
   font-weight: 700;
+  color: var(--demo-overlay-text-color);
   &:hover {
     opacity: 0.5;
   }
