@@ -1,4 +1,4 @@
-/* #region Configuration */
+/* #region Vars */
 .demo-overlay {
   --demo-overlay-bg-color: #001428;
   --demo-overlay-text-color: white;
@@ -48,14 +48,14 @@
   transition: all 0.2s ease-in-out;
   padding: 0;
   box-sizing: border-box;
-}
-.demo-overlay-switch:hover {
-  opacity: 1;
-  transform: scale(0.9);
-}
-.demo-overlay-switch:active {
-  opacity: 0.66;
-  transform: scale(0.8);
+  &:hover {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+  &:active {
+    opacity: 0.66;
+    transform: scale(0.8);
+  }
 }
 .demo-overlay-active .demo-overlay-switch {
   opacity: 1;
@@ -120,7 +120,8 @@
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  padding: 0 25px 0 25px;
+  padding-left: 25px;
+  padding-right: 25px;
   box-sizing: border-box;
 }
 
@@ -134,9 +135,9 @@
   opacity: 1;
   transition: opacity 0.2s ease-in-out;
   font-weight: 700;
-}
-.demo-overlay-link:hover {
-  opacity: 0.5;
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .demo-overlay-link-icon {
@@ -147,10 +148,17 @@
   .demo-overlay {
     top: 10px;
     left: 10px;
+    font-size: 15px;
   }
 
-  .demo-overlay * {
-    font-size: 1.3rem;
+  .demo-overlay-content {
+    gap: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .demo-overlay-link {
+    gap: 8px;
   }
 
   .demo-overlay-link-icon {
